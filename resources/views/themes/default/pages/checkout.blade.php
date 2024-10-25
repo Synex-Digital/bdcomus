@@ -262,7 +262,7 @@
                                             </tr>
                                             <tr>
                                                 <th>SHIPPING</th>
-                                                <td>Free shipping</td>
+                                                <td id="shipping-fee">0Tk</td>
                                             </tr>
                                             <tr>
                                                 <th>Discount</th>
@@ -341,6 +341,7 @@
 
                     if (!isNaN(subtotal) && !isNaN(shippingPrice)) {
                         let grandTotal = subtotal + shippingPrice;
+                        $('#shipping-fee').text(shippingPrice + 'Tk');
                         $('.checkout-grandtotal').text(grandTotal.toFixed(2) + ' Tk');
                     } else {
                         console.error(
