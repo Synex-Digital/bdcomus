@@ -1,7 +1,7 @@
 @extends('themes.default.layout.app')
 
 @section('content')
-    <main style="padding-top: 90px;">
+    <main>
         <div class="mb-4 pb-4"></div>
         <section class="shop-checkout container">
             <div class="order-complete">
