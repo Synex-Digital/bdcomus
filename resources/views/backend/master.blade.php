@@ -66,7 +66,7 @@ $config = Config::first();
 
     <!-- Main Script -->
     <script src="{{ asset('backend') }}/assets/js/main.js" type="text/javascript"></script>
-    <script src="{{ asset('backend') }}/assets/js/custom-chart.js" type="text/javascript"></script>
+    {{-- <script src="{{ asset('backend') }}/assets/js/custom-chart.js" type="text/javascript"></script> --}}
     @yield('script')
     @livewireScripts
 </body>

@@ -7,7 +7,7 @@
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
-            
+
             // The data for our dataset
             data: {
                 labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -63,7 +63,7 @@
                     backgroundColor: "#5897fb",
                     barThickness:10,
                     data: [233,321,783,900]
-                }, 
+                },
                 {
                     label: "Europe",
                     backgroundColor: "#7bcf86",
@@ -100,5 +100,5 @@
             }
         });
     } //end if
-    
+
 })(jQuery);
