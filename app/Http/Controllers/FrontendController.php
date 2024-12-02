@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Theme;
 use App\Models\Banner;
 use App\Models\Config;
 use App\Models\Product;
 use App\Models\ProductCategory;
-use App\Models\Theme;
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\OpenGraph;
 
 class FrontendController extends Controller
 {
@@ -25,6 +26,7 @@ class FrontendController extends Controller
         SEOTools::setDescription('Discover a wide range of stylish and comfortable lingerie options for women in Dhaka, Bangladesh. From bras to panties, synexdigital offers the perfect fit for every occasion. Shop now and enjoy fast delivery!');
         SEOMeta::addKeyword(['Stylish Lingerie, Comfortable Undergarments, Women\'s Fashion']);
         SEOMeta::setCanonical('https://synexdigital.com' . request()->getPathInfo());
+        OpenGraph::addImage(asset('themes/default/thumnail.png'));
         $category = ProductCategory::all();
         $banner = Banner::all();
         if ($config) {
